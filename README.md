@@ -58,6 +58,7 @@ cp kubectl-bodyguard-config.example ~/.kubectl-bodyguard-config
 
 Then edit `~/.kubectl-bodyguard-config` to customize:
 - `PROD_BG_COLOR` - Production background color (hex format like `#4d2f1a`)
+- `PROD_PATTERNS` - Array of regex patterns to match production contexts
 
 ## Troubleshooting
 

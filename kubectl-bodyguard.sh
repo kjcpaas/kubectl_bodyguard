@@ -4,6 +4,11 @@
 
 # Configuration - can be overridden in ~/.kubectl-bodyguard-config
 PROD_BG_COLOR="#4d2f1a"  # Default dark brown
+PROD_PATTERNS=(
+    "prod"
+    ".*-prod.*"
+    ".*-production.*"
+)
 
 # Load user configuration if it exists
 if [[ -f ~/.kubectl-bodyguard-config ]]; then
@@ -14,14 +19,8 @@ fi
 is_production_context() {
     local current_context=$(kubectl config current-context 2>/dev/null)
 
-    # Define production context patterns (customize these for your setup)
-    local prod_patterns=(
-        "prod"
-        ".*-prod.*"
-        ".*-production.*"
-    )
-
-    for pattern in "${prod_patterns[@]}"; do
+    # Use configurable production context patterns
+    for pattern in "${PROD_PATTERNS[@]}"; do
         if [[ $current_context =~ $pattern ]]; then
             return 0  # true - is production
         fi

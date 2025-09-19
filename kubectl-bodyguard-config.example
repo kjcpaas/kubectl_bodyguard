@@ -10,3 +10,15 @@
 #   PROD_BG_COLOR="#004466"  # Dark blue
 
 PROD_BG_COLOR="#4d2f1a"
+
+# Production context patterns (array of regex patterns)
+# These patterns are used to detect production environments
+# Examples:
+#   PROD_PATTERNS=("prod" ".*-prod.*" ".*-production.*")
+#   PROD_PATTERNS=("production" ".*-prd.*" ".*live.*")
+#
+PROD_PATTERNS=(
+    "prod"
+    ".*-prod.*"
+    ".*-production.*"
+)
