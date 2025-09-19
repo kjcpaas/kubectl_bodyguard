@@ -46,6 +46,18 @@ Once installed, kubectl bodyguard provides:
 - Automatic detection of production environments
 - Visual warning messages when entering production
 - Protects you from accidentally breaking prod
+- Configurable background colors
+
+## Configuration
+
+You can customize kubectl bodyguard by copying the example config:
+
+```bash
+cp kubectl-bodyguard-config.example ~/.kubectl-bodyguard-config
+```
+
+Then edit `~/.kubectl-bodyguard-config` to customize:
+- `PROD_BG_COLOR` - Production background color (hex format like `#4d2f1a`)
 
 ## Troubleshooting
 
@@ -59,4 +71,5 @@ If you see "kubectl-bodyguard.sh not found" errors, ensure:
 
 - `kubectl-bodyguard.sh` - Main bodyguard script
 - `kubectl-bodyguard-integration.sh` - Shell integration functions
-- `setup-kubectl-warnings.sh` - Setup helper script
+- `kubectl-bodyguard-config.example` - Example configuration file
+- `README.md` - This documentation

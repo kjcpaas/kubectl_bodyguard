@@ -34,7 +34,7 @@ is_production_context() {
 set_terminal_color() {
     if is_production_context; then
         # Set terminal background to red for production
-        printf '\033]11;#664422\007'  # Dark brown/orange background
+        printf "\033]11;${PROD_BG_COLOR}\007"  # Configurable production background
         # Show warning message when switching to prod
         local current_context=$(kubectl config current-context 2>/dev/null)
         echo -e "\033[1;37m⚠️  PRODUCTION CONTEXT: $current_context"

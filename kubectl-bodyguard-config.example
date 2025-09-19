@@ -1,0 +1,12 @@
+# kubectl Bodyguard Configuration
+# Copy this file to ~/.kubectl-bodyguard-config to customize
+
+# Production background color (hex format)
+# Examples:
+#   PROD_BG_COLOR="#4d2f1a"  # Dark brown (default)
+#   PROD_BG_COLOR="#660000"  # Dark red
+#   PROD_BG_COLOR="#663300"  # Orange brown
+#   PROD_BG_COLOR="#330066"  # Dark purple
+#   PROD_BG_COLOR="#004466"  # Dark blue
+
+PROD_BG_COLOR="#4d2f1a"
