@@ -2,6 +2,8 @@
 
 Your personal bodyguard that protects you from accidentally breaking production Kubernetes clusters.
 
+![Demo](demo.gif)
+
 ## Installation
 
 1. Clone or download this repository
