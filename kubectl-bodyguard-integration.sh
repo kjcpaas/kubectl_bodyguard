@@ -17,8 +17,8 @@ fi
 # Function to wrap kubectl and update colors after context changes
 kubectl_wrapper() {
     command kubectl "$@"
-    # Check if this was a context switch command
-    if [[ "$1" == "config" && "$2" == "use-context" ]] && [[ -n "$KUBECTL_BODYGUARD_SCRIPT" ]]; then
+    # Check if this was a context switch command or get-contexts command
+    if [[ "$1" == "config" && ("$2" == "use-context" || "$2" == "get-contexts") ]] && [[ -n "$KUBECTL_BODYGUARD_SCRIPT" ]]; then
         $KUBECTL_BODYGUARD_SCRIPT colors
     fi
 }
